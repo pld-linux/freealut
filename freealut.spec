@@ -1,5 +1,5 @@
 Summary:	Free implementation of OpenAL's ALUT standard
-Summary(pl):	Wolna implementacja standartu ALUT OpenALa
+Summary(pl):	Wolnodostêpna implementacja standardu ALUT OpenAL-a
 Name:		freealut
 Version:	1.0.1
 Release:	0.1
@@ -12,10 +12,10 @@ BuildRequires:	OpenAL-devel >= 0.0.8-1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Free implementation of OpenAL's ALUT standard.
+Free implementation of ALUT (OpenAL Utility Toolkit) standard.
 
 %description -l pl
-Wolna implementacja standartu ALUT OpenALa.
+Wolnodostêpna implementacja standartu ALUT (OpenAL Utility Toolkit).
 
 %package devel
 Summary:	Headers for freealut
@@ -71,10 +71,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*-config
 %attr(755,root,root) %{_libdir}/libalut.so
-%{_libdir}/*.la
-%{_pkgconfigdir}/*
+%{_libdir}/libalut.la
 %{_includedir}/AL/*
+%{_pkgconfigdir}/*
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/libalut.a
