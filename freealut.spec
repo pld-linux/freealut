@@ -2,7 +2,7 @@ Summary:	Free implementation of OpenAL's ALUT standard
 Summary(pl):	Wolnodostêpna implementacja standardu ALUT OpenAL-a
 Name:		freealut
 Version:	1.0.1
-Release:	0.1
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.openal.org/openal_webstf/downloads/%{name}-%{version}.tar.gz
@@ -52,9 +52,12 @@ Biblioteka alut do konsolidacji statycznej.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install examples/*.c $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -69,9 +72,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%doc doc/*
 %attr(755,root,root) %{_bindir}/*-config
 %attr(755,root,root) %{_libdir}/libalut.so
 %{_libdir}/libalut.la
+%{_examplesdir}/%{name}-%{version}
 %{_includedir}/AL/*
 %{_pkgconfigdir}/*
 
