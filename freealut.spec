@@ -9,7 +9,7 @@ Source0:	http://www.openal.org/openal_webstf/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	e089b28a0267faabdb6c079ee173664a
 URL:		http://www.openal.org/
 BuildRequires:	OpenAL-devel >= 0.0.8-1
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.56
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -49,11 +49,11 @@ Biblioteka alut do konsolidacji statycznej.
 %setup -q
 
 %build
-cp -f /usr/share/automake/config.sub .
 %{__libtoolize}
 %{__aclocal} -I admin/autotools/m4
 %{__autoconf}
 %{__autoheader}
+%{__automake}
 %configure
 
 %{__make}
