@@ -1,5 +1,5 @@
 Summary:	Free implementation of OpenAL's ALUT standard
-Summary(pl):	WolnodostÍpna implementacja standardu ALUT OpenAL-a
+Summary(pl.UTF-8):   Wolnodostƒôpna implementacja standardu ALUT OpenAL-a
 Name:		freealut
 Version:	1.1.0
 Release:	1
@@ -17,12 +17,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Free implementation of ALUT (OpenAL Utility Toolkit) standard.
 
-%description -l pl
-WolnodostÍpna implementacja standartu ALUT (OpenAL Utility Toolkit).
+%description -l pl.UTF-8
+Wolnodostƒôpna implementacja standartu ALUT (OpenAL Utility Toolkit).
 
 %package devel
 Summary:	Headers for freealut
-Summary(pl):	Pliki nag≥Ûwkowe do freealuta
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe do freealuta
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	OpenAL-devel >= 0.0.8-1
@@ -30,19 +30,19 @@ Requires:	OpenAL-devel >= 0.0.8-1
 %description devel
 freealut header files.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe freealuta.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe freealuta.
 
 %package static
 Summary:	Static alut library
-Summary(pl):	Statyczna biblioteka alut
+Summary(pl.UTF-8):   Statyczna biblioteka alut
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static alut library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka alut do konsolidacji statycznej.
 
 %prep
