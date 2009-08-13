@@ -2,7 +2,7 @@ Summary:	Free implementation of OpenAL's ALUT standard
 Summary(pl.UTF-8):	Wolnodostępna implementacja standardu ALUT OpenAL-a
 Name:		freealut
 Version:	1.1.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.openal.org/openal_webstf/downloads/%{name}-%{version}.tar.gz
