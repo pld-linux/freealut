@@ -5,7 +5,8 @@ Version:	1.1.0
 Release:	2
 License:	LGPL
 Group:		Libraries
-Source0:	http://www.openal.org/openal_webstf/downloads/%{name}-%{version}.tar.gz
+#Source0Download: http://connect.creativelabs.com/openal/Downloads/Forms/AllItems.aspx?RootFolder=/openal/Downloads/ALUT
+Source0:	http://connect.creativelabs.com/openal/Downloads/ALUT/%{name}-%{version}.tar.gz
 # Source0-md5:	e089b28a0267faabdb6c079ee173664a
 URL:		http://www.openal.org/
 BuildRequires:	OpenAL-devel >= 0.0.8-1
@@ -77,17 +78,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/libalut.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libalut.so.?
+%attr(755,root,root) %ghost %{_libdir}/libalut.so.0
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/*
-%attr(755,root,root) %{_bindir}/*-config
+%attr(755,root,root) %{_bindir}/freealut-config
 %attr(755,root,root) %{_libdir}/libalut.so
 %{_libdir}/libalut.la
+%{_includedir}/AL/alut.h
+%{_pkgconfigdir}/freealut.pc
 %{_examplesdir}/%{name}-%{version}
-%{_includedir}/AL/*
-%{_pkgconfigdir}/*
 
 %files static
 %defattr(644,root,root,755)
